@@ -13,7 +13,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://classroom-project-bhavadharani260307.onrender.com/signup", formData);
+      const response = await axios.post("https://winter-internship-3beu.onrender.com/signup", formData);
       setMessage("Signup successful!");
       console.log(response.data);
     } catch (error) {

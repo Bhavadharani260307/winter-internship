@@ -8,7 +8,8 @@ const TestConnection = () => {
     const testBackendConnection = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:8001/json');
+            const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8001';
+            const response = await axios.get(`${backendUrl}/json`);
             setData(response.data);
             console.log('Backend connected successfully:', response.data);
         } catch (error) {

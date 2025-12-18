@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://classroom-project-bhavadharani260307.onrender.com/login", formData);
+      const response = await axios.post("https://winter-internship-3beu.onrender.com/login", formData);
       setMessage("Login successful!");
       console.log(response.data);
     } catch (error) {
