@@ -24,7 +24,7 @@ const UseMemo = () => {
     return (
         <div style={styling}> 
             <h3>UseMemo Example</h3>
-            <input type='number' value={number} onChange={e => setText(e.target.value)}/>
+            <input type='number' value={number} onChange={e => setNumber(parseInt(e.target.value) || 0)}/>
             <button onClick={() => setNumber(number + 1)}>+</button>
             <h4>Number is {doubleNumber}</h4>
             <button onClick = {() => setTheme(!theme)}>Toggle Theme</button>

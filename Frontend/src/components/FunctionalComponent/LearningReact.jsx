@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import State from './State.jsx';
-import Props from './props.jsx';
+import Props from './Props.jsx';
 
 const LearningReact = () => {
     const [searchParams] = useSearchParams();
