@@ -59,7 +59,7 @@ app.use(cors());
 app.use(express.json());
 
 /* ===== MongoDB Connection ===== */
-const mongoUrl = process.env.MONGODB_URL || "mongodb://localhost:27017/BHAVADHARANI";
+const mongoUrl = process.env.MONGODB_URL || "mongodb+srv://bhavadharani:bhava26@cluster0.kh80pj3.mongodb.net/BHAVADHARANI?authSource=admin&authMechanism=DEFAULT";
 mongoose
   .connect(mongoUrl)
   .then(() => console.log("MongoDB connected"))
