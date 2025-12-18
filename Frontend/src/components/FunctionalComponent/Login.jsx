@@ -13,7 +13,8 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://winter-internship-3beu.onrender.com/login", formData);
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://winter-internship-3beu.onrender.com";
+      const response = await axios.post(`${backendUrl}/login`, formData);
       setMessage("Login successful!");
       console.log(response.data);
     } catch (error) {

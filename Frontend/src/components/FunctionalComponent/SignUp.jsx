@@ -13,7 +13,8 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://winter-internship-3beu.onrender.com/signup", formData);
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://winter-internship-3beu.onrender.com";
+      const response = await axios.post(`${backendUrl}/signup`, formData);
       setMessage("Signup successful!");
       console.log(response.data);
     } catch (error) {
